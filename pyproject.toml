@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "dex-lp-engine"
+version = "0.2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "web3>=6.0",
+    "eth-abi>=4.0",
+    "aiohttp>=3.9",
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "pydantic>=2.5",
+    "structlog>=23.2",
+    "tenacity>=8.2",
+    "python-dotenv>=1.0",
+    "asyncio-throttle>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-asyncio>=0.21",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+]
+metrics = ["prometheus-client>=0.19"]
+redis   = ["redis>=5.0"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
