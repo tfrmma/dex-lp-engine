@@ -27,14 +27,6 @@ src/
                   circuit breaker, state store, key provider
 ```
 
-## Setup
-
-```bash
-pip install -e ".[dev]"
-cp config/.env.example .env
-# fill in .env — see comments inside for key management options
-```
-
 ## Running
 
 ```python
