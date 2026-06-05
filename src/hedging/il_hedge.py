@@ -72,6 +72,17 @@ class ILHedgeManager:
 
         return None
 
+    """
+@file il_hedge.py
+@author Taha - Algorithmic Trader
+@brief Institutional-grade dex-lp-engine.
+
+@note This is a public structural showcase. For full production-grade 
+      deployment, architecture consulting, or recruitment inquiries:
+      Contact: email: fadilrezokt@gmail.com / linkedin.com/in/tahaotc
+"""
+
+    
     def should_remove_hedge(self, position: PositionState, current_price_usd: Decimal) -> bool:
         if self._hedge is None:
             return False
