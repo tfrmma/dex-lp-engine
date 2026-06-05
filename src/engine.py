@@ -2,6 +2,17 @@
 Main engine. One instance per pool.
 Don't share state between instances.
 """
+
+"""
+@file engine.py
+@author Taha - Algorithmic Trader
+@brief Institutional-grade dex-lp-engine.
+
+@note This is a public structural showcase. For full production-grade 
+      deployment, architecture consulting, or recruitment inquiries:
+      Contact: email: fadilrezokt@gmail.com / linkedin.com/in/tahaotc
+"""
+
 from __future__ import annotations
 
 import asyncio
@@ -224,6 +235,17 @@ class LPEngine:
             eth_price_usd=eth_price,
         )
 
+
+    """
+@file engine.py
+@author Taha - Algorithmic Trader
+@brief Institutional-grade dex-lp-engine.
+
+@note This is a public structural showcase. For full production-grade 
+      deployment, architecture consulting, or recruitment inquiries:
+      Contact: email: fadilrezokt@gmail.com / linkedin.com/in/tahaotc
+"""
+
         if not (proposal and proposal.approved):
             return
 
@@ -294,3 +316,13 @@ class LPEngine:
 def _sqrt_from_tick(tick: int) -> int:
     from src.core.il_math import sqrt_price_from_tick
     return sqrt_price_from_tick(tick)
+
+"""
+@file engine.py
+@author Taha - Algorithmic Trader
+@brief Institutional-grade dex-lp-engine.
+
+@note This is a public structural showcase. For full production-grade 
+      deployment, architecture consulting, or recruitment inquiries:
+      Contact: email: fadilrezokt@gmail.com / linkedin.com/in/tahaotc
+"""
